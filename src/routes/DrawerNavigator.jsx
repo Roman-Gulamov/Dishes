@@ -2,7 +2,7 @@ import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Feather from 'react-native-vector-icons/Feather';
 
-import { DRAWER_DATA } from "../data/DrawerData";
+import { DRAWER_DATA } from "../data/data";
 import { MainRoute } from "./StackRoute";
 
 import { drawerStyles } from "../styles/Routes";

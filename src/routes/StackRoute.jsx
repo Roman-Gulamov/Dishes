@@ -5,7 +5,7 @@ import { HeaderBackButton } from '@react-navigation/stack';
 
 import { screenOptionStyle } from '../styles/Routes';
 
-import { NavButton } from '../components/NavButton';
+import { HeaderMenuButton } from '../components/HeaderMenuButton';
 import { Home } from '../screens/Home';
 import { Categories } from '../screens/Categories';
 import { Search } from '../screens/Search';
@@ -28,7 +28,7 @@ export const MainRoute = ({ screenName }) => {
                         headerLeft: () => (
                         screenName !== 'Home' ? 
                             <HeaderBackButton onPress={() => navigation.goBack()} /> : 
-                            <NavButton onPress={() => navigation.toggleDrawer()} />
+                            <HeaderMenuButton onPress={() => navigation.openDrawer()} />
                         ),
                     }}
                 />
