@@ -1,14 +1,30 @@
 import React from 'react';
-import { Text } from 'react-native';
+
+import { DISHES_DATA } from '../data/data';
+import { FlatListPacker } from '../components/FlatListPacker';
+import { CardMap } from '../components/CardMap';
+
+import { styles } from '../styles/Cards';
 
 
-export const Home = ({ navigation }) => {
+export const Home = () => {
     return (
-        <> 
-            <Text>Home</Text>
-        </>
+        <FlatListPacker 
+            data={DISHES_DATA}
+            renderItem={({ item }) => 
+                <CardMap 
+                    image={item.image} 
+                    title={item.title} 
+                    subtitle={item.categories} 
+                    imageStyle={styles.homeImage} 
+                    cardStyle={styles.homeCard} 
+                    titleStyle={styles.homeTitle}
+                    subtitleStyle={styles.homeSubtitle}
+                />
+            }
+            numColumns={2}
+            contentContainerStyle={styles.homeContent}
+        />
     )
 }
-
-
 
