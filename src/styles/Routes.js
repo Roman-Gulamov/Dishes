@@ -1,7 +1,3 @@
-import { Dimensions } from 'react-native';
-
-const windowHeight = Dimensions.get('window').height;
-
 export const drawerStyles = {
     activeTintColor: 'black',
     activeBackgroundColor: 'white',
@@ -11,10 +7,5 @@ export const drawerStyles = {
 };
 
 export const screenOptionStyle = {
-    headerTitleAlign: "center",
-    headerStyle: {
-        height: windowHeight / 10 
-    }
+    headerTitleAlign: "center"
 };
-
-//! height: windowHeight / 10  посмотри как без него
