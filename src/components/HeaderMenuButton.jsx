@@ -8,7 +8,7 @@ export const HeaderMenuButton = ({ onPress }) => {
         <TouchableOpacity 
             activeOpacity={0.4} 
             onPress={onPress} 
-            style={{paddingLeft: 10}}
+            style={{paddingLeft: 10, paddingRight: 10}}
         >
             <MaterialIcons
                 name='menu'
