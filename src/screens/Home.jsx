@@ -11,6 +11,9 @@ export const Home = () => {
     return (
         <FlatListPacker 
             data={DISHES_DATA}
+            numColumns={2}
+            keyExtractor = {item => item.id}
+            contentContainerStyle={styles.homeContent}
             renderItem={({ item }) => 
                 <CardMap 
                     image={item.image} 
@@ -22,8 +25,6 @@ export const Home = () => {
                     subtitleStyle={styles.homeSubtitle}
                 />
             }
-            numColumns={2}
-            contentContainerStyle={styles.homeContent}
         />
     )
 }

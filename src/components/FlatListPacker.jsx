@@ -4,13 +4,13 @@ import { View, FlatList } from 'react-native';
 import { styles } from '../styles/Cards';
 
 
-export const FlatListPacker = ({ data, renderItem, numColumns, contentContainerStyle }) => {
+export const FlatListPacker = ({ data, renderItem, keyExtractor, numColumns, contentContainerStyle }) => {
     return (
         <View style={styles.container}>
             <FlatList 
                 data={data}
                 renderItem={renderItem}
-                keyExtractor = {item => item.id}
+                keyExtractor={keyExtractor}
                 contentContainerStyle={contentContainerStyle}
                 numColumns={numColumns}
             />
