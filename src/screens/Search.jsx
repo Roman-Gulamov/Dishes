@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Text } from 'react-native';
+import SearchContext  from '../services/context';
 
+import { styles } from '../styles/Search';
 
-export const Search = ({ navigation }) => {
+export const Search = () => {
+    const {searchValue, setSearchValue} = useContext(SearchContext);
+
     return (
-        <> 
-            <Text>Search</Text>
-        </>
+        <Text>
+            {searchValue}
+        </Text>
     )
 }
