@@ -1,3 +1,7 @@
+import { Dimensions } from 'react-native';
+
+const windowHeight = Dimensions.get('window').height;
+
 export const drawerStyles = {
     activeTintColor: 'black',
     activeBackgroundColor: 'white',
@@ -7,5 +11,14 @@ export const drawerStyles = {
 };
 
 export const screenOptionStyle = {
-    headerTitleAlign: "center"
+    headerTitleAlign: "center",
+    headerStyle: { 
+        height: windowHeight / 8.5 
+    }
+};
+
+export const headerTitle = {
+    fontWeight: '700',
+    fontSize: 20,
+    color: 'rgba(0, 0, 0, 0.7)'
 };
